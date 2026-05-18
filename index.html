@@ -261,6 +261,61 @@ print("Seja bem-vindo à aula de programação!")</pre>
       <button onclick="copiarCodigo('codigo5')">Copiar código</button>
     </section>
 
+    <!-- CARD 6 -->
+    <section class="card codigo-card">
+      <span class="tag">Git / GitHub</span>
+      <h2>Aula 06 - Versionamento de Códigos</h2>
+      <p>
+        Clique no botão abaixo para visualizar a atividade sobre Trunk-Based Development.
+      </p>
+
+      <button onclick="mostrarAtividadeVersionamento()">Versionamento de Códigos</button>
+
+      <div id="atividadeVersionamento" class="oculto" style="margin-top: 18px;">
+        <pre>ATIVIDADE - TRUNK-BASED DEVELOPMENT
+
+Parte 1 - Estratégia de Branches
+
+No Trunk-Based Development, utilizaremos principalmente a branch main.
+As branches devem ser curtas e durar poucas horas ou no máximo um dia.
+
+Parte 2 - Frequência de Integração
+
+Ana e Bruno devem fazer commits frequentes durante o dia.
+Ao final do expediente, devem integrar as alterações na branch main.
+
+Parte 3 - Feature Flags
+
+Nome das flags:
+- habilitarPagamentoPIX
+- habilitarCupomDesconto
+
+Valor padrão:
+false
+
+Parte 4 - Pseudocódigo
+
+FUNÇÃO renderizarTelaDePagamento()
+
+    mostrar título "Tela de Pagamento"
+
+    SE habilitarCupomDesconto for verdadeiro ENTÃO
+        mostrar campo "Cupom de Desconto"
+    SENÃO
+        não mostrar nada
+    FIM SE
+
+    SE habilitarPagamentoPIX for verdadeiro ENTÃO
+        mostrar botão "Pagar com PIX"
+    SENÃO
+        mostrar botão "Pagar com Cartão"
+    FIM SE
+
+FIM FUNÇÃO.</pre>
+      </div>
+    </section>
+
+
   </main>
 
   <footer>
@@ -275,6 +330,12 @@ print("Seja bem-vindo à aula de programação!")</pre>
       });
     }
 
+
+
+    function mostrarAtividadeVersionamento() {
+      const atividade = document.getElementById("atividadeVersionamento");
+      atividade.classList.toggle("oculto");
+    }
     function pesquisarCodigos() {
       const termo = document.getElementById("pesquisa").value.toLowerCase();
       const cards = document.querySelectorAll(".codigo-card");
