@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca de Códigos - Aulas de Programação</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #e0e7ff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .aviso {
+      background: #1e293b;
+      border-left: 5px solid #38bdf8;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .search-box {
+      margin-bottom: 25px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background: #1e293b;
+      color: white;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 22px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card h2 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #cbd5e1;
+    }
+
+    pre {
+      background: #020617;
+      color: #22c55e;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      border: 1px solid #1e293b;
+    }
+
+    button {
+      background: #22c55e;
+      color: #052e16;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #86efac;
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      .card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Biblioteca de Códigos</h1>
+    <p>Material de apoio para os alunos copiarem e utilizarem nas atividades.</p>
+  </header>
+
+  <main class="container">
+
+    <section class="aviso">
+      <strong>Orientação aos alunos:</strong><br>
+      Leia a explicação de cada atividade, copie o código indicado e cole no programa utilizado em aula.
+      Lembre-se de testar, observar o resultado e tentar entender cada linha do código.
+    </section>
+
+    <div class="search-box">
+      <input type="text" id="pesquisa" placeholder="Pesquisar por aula, linguagem ou tema..." onkeyup="pesquisarCodigos()">
+    </div>
+
+    <!-- CARD 1 -->
+    <section class="card codigo-card">
+      <span class="tag">HTML</span>
+      <h2>Aula 01 - Estrutura básica de uma página HTML</h2>
+      <p>
+        Este código mostra a estrutura inicial de uma página HTML. Ele serve como base para criar qualquer página da internet.
+      </p>
+
+      <pre id="codigo1">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Minha primeira página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+  &lt;p&gt;Esta é minha primeira página HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <button onclick="copiarCodigo('codigo1')">Copiar código</button>
+    </section>
+
+    <!-- CARD 2 -->
+    <section class="card codigo-card">
+      <span class="tag">CSS</span>
+      <h2>Aula 02 - Estilizando uma página com CSS</h2>
+      <p>
+        Este exemplo ensina como mudar cor, fonte e espaçamento usando CSS.
+      </p>
+
+      <pre id="codigo2">body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+p {
+  color: #333;
+  font-size: 18px;
+}</pre>
+
+      <button onclick="copiarCodigo('codigo2')">Copiar código</button>
+    </section>
+
+    <!-- CARD 3 -->
+    <section class="card codigo-card">
+      <span class="tag">JavaScript</span>
+      <h2>Aula 03 - Criando uma mensagem com JavaScript</h2>
+      <p>
+        Este código exibe uma mensagem na tela usando JavaScript.
+      </p>
+
+      <pre id="codigo3">alert("Bem-vindo à aula de programação!");
+
+let nome = prompt("Digite seu nome:");
+alert("Olá, " + nome + "! Bons estudos!");</pre>
+
+      <button onclick="copiarCodigo('codigo3')">Copiar código</button>
+    </section>
+
+    <!-- CARD 4 -->
+    <section class="card codigo-card">
+      <span class="tag">Python</span>
+      <h2>Aula 04 - Primeiro código em Python</h2>
+      <p>
+        Este exemplo mostra como imprimir uma mensagem e usar uma variável em Python.
+      </p>
+
+      <pre id="codigo4">nome = input("Digite seu nome: ")
+print("Olá,", nome)
+print("Seja bem-vindo à aula de programação!")</pre>
+
+      <button onclick="copiarCodigo('codigo4')">Copiar código</button>
+    </section>
+
+    <!-- CARD 5 -->
+    <section class="card codigo-card">
+      <span class="tag">Banco de Dados</span>
+      <h2>Aula 05 - Criando uma tabela em SQL</h2>
+      <p>
+        Este código cria uma tabela simples de alunos em um banco de dados.
+      </p>
+
+      <pre id="codigo5">CREATE TABLE alunos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100),
+  turma VARCHAR(50)
+);</pre>
+
+      <button onclick="copiarCodigo('codigo5')">Copiar código</button>
+    </section>
+
+  </main>
+
+  <footer>
+    Página criada para apoio às aulas de programação.
+  </footer>
+
+  <script>
+    function copiarCodigo(id) {
+      const codigo = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(codigo).then(() => {
+        alert("Código copiado com sucesso!");
+      });
+    }
+
+    function pesquisarCodigos() {
+      const termo = document.getElementById("pesquisa").value.toLowerCase();
+      const cards = document.querySelectorAll(".codigo-card");
+
+      cards.forEach(card => {
+        const texto = card.innerText.toLowerCase();
+
+        if (texto.includes(termo)) {
+          card.classList.remove("oculto");
+        } else {
+          card.classList.add("oculto");
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
